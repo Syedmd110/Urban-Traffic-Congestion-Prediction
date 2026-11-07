@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urban Traffic Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+            color: #172033;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a, #0369a1);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .logo {
+            font-size: 50px;
+        }
+
+        .login-box {
+            width: 420px;
+            max-width: 92%;
+            margin: 45px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 13px;
+            margin-top: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #0284c7, #2563eb);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .demo {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eff6ff;
+            border-radius: 10px;
+            color: #1e40af;
+            line-height: 1.6;
+        }
+
+        .notice {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #fff7ed;
+            border-radius: 8px;
+            color: #9a3412;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">🚦</div>
+        <h1>Urban Traffic</h1>
+        <p>Congestion Prediction Platform</p>
+        <p>Smart Roads • Smarter Travel</p>
+    </div>
+
+    <div class="login-box">
+
+        <h2>Welcome 👋</h2>
+        <p>Login to plan your journey</p>
+
+        <form id="loginForm">
+
+            <input type="text"
+                   placeholder="Enter Username"
+                   required>
+
+            <input type="password"
+                   placeholder="Enter Password"
+                   required>
+
+            <select required>
+                <option>User / Student</option>
+                <option>Traffic Authority</option>
+            </select>
+
+            <button type="submit">
+                🔐 Login
+            </button>
+
+        </form>
+
+        <div class="demo">
+            <b>Urban Traffic Prediction Platform</b>
+            <br><br>
+            Student Login Interface
+            <br>
+            Traffic Authority Interface
+            <br>
+            Congestion Prediction
+            <br>
+            Alternate Route Recommendation
+            <br>
+            Traffic Analytics Dashboard
+        </div>
+
+        <div class="notice" id="notice">
+            Frontend preview only. Backend login is not connected.
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("notice").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
